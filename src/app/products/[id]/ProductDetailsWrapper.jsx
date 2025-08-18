@@ -1,3 +1,4 @@
+// app/products/[id]/ProductDetailsWrapper.jsx
 'use client';
 
 import { useState, useContext, useEffect } from 'react';

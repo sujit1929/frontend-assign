@@ -2,7 +2,6 @@
 import { fetchProductById } from '@/data/products';
 import { notFound } from 'next/navigation';
 import ProductDetailsWrapper from './ProductDetailsWrapper';
-import RecentlyViewed from '@/components/RecentlyViewed';
 
 export default async function ProductPage({ params }) {
   const { id } = params;
