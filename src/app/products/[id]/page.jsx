@@ -1,0 +1,20 @@
+// app/products/[id]/page.jsx
+import { fetchProductById } from '@/data/products';
+import { notFound } from 'next/navigation';
+import ProductDetailsWrapper from './ProductDetailsWrapper';
+import RecentlyViewed from '@/components/RecentlyViewed';
+
+export default async function ProductPage({ params }) {
+  const { id } = params;
+  const product = await fetchProductById(id);
+
+  if (!product) {
+    notFound();
+  }
+
+  return (
+    <div className="p-8 bg-white rounded-lg shadow-xl">
+      <ProductDetailsWrapper product={product} />
+    </div>
+  );
+}
