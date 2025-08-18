@@ -1,6 +1,5 @@
-// src/components/ProductCard.jsx
 'use client';
-
+import Image from "next/image";
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
@@ -11,10 +10,14 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-      <img
+      <Image
         src={product.imageUrl}
         alt={product.name}
+        width={400}
+        height={192} // लगभग h-48 = 192px
         className="w-full h-48 object-cover"
+        unoptimized
+
       />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{product.name}</h3>

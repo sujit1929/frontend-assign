@@ -1,9 +1,10 @@
 'use client';
+import Image from "next/image";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
- export default function RecentlyViewed() {
+export default function RecentlyViewed() {
   const [recentlyViewedProducts, setRecentlyViewedProducts] = useState([]);
 
   useEffect(() => {
@@ -26,10 +27,14 @@ import Link from 'next/link';
             className="block"
           >
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-              <img
+              <Image
                 src={product.imageUrl}
                 alt={product.name}
+                width={400}
+                height={128} // लगभग h-32 = 128px
                 className="w-full h-32 object-cover"
+                  unoptimized
+
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 truncate">
@@ -45,5 +50,4 @@ import Link from 'next/link';
       </div>
     </div>
   );
-};
-;
+}
