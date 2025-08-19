@@ -23,9 +23,9 @@ export default function ProductDetailsWrapper({ product }) {
   useEffect(() => {
     if (product) {
       const stored = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
-      console.log('stored', stored);
+      // console.log('stored', stored);
       const filtered = stored.filter((p) => p.id !== product.id);
-      console.log('filtered', filtered);
+      // console.log('filtered', filtered);
       const updated = [product, ...filtered];
       const latestThree = updated.slice(0, 3);
 
