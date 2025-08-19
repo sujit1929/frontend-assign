@@ -14,7 +14,7 @@ export default function ProductDetailsWrapper({ product }) {
   const [selectedSize, setSelectedSize] = useState('');
 
   const availableSizesForColor =
-    product.variants.find((v) => v.color === selectedColor)?.sizes || [];
+    product.variants.find((variant) => variant.color === selectedColor)?.sizes || [];
 
   useEffect(() => {
     setSelectedSize('');

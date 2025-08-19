@@ -15,7 +15,6 @@ const ProductDetails = ({
 }) => {
   return (
     <div className="flex flex-col md:flex-row gap-8">
-      {/* LEFT: IMAGE */}
       <div className="md:w-1/2 flex justify-center items-center rounded-lg overflow-hidden">
         <Image
           src={product.imageUrl}
@@ -28,7 +27,6 @@ const ProductDetails = ({
         />
       </div>
 
-      {/* RIGHT: DETAILS */}
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-4xl font-extrabold text-gray-900">
           {product.name}
@@ -42,7 +40,6 @@ const ProductDetails = ({
           ${product.price.toFixed(2)}
         </p>
 
-        {/* COLOR SELECTOR */}
         <div>
           <h3 className="text-xl font-semibold text-gray-800 mb-3">
             Color: {selectedColor}
@@ -64,14 +61,11 @@ const ProductDetails = ({
           </div>
         </div>
 
-        {/* SIZE SELECTOR (✅ replaced inline buttons with reusable component) */}
         <SizeSelector
           availableSizes={availableSizesForColor}
           selectedSize={selectedSize}
           onSizeSelect={onSizeSelect}
         />
-
-        {/* ADD TO CART */}
         <button
           onClick={onAddToCart}
           className="w-full py-4 bg-blue-600 text-white text-xl font-bold rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none"
