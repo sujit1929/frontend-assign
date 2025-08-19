@@ -31,7 +31,7 @@ export default function RecentlyViewed() {
                 src={product.imageUrl}
                 alt={product.name}
                 width={400}
-                height={128} // लगभग h-32 = 128px
+                height={128} 
                 className="w-full h-32 object-cover"
                   unoptimized
 

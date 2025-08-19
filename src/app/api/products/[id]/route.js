@@ -1,14 +1,13 @@
-// src/app/api/products/[id]/route.js
 import { products } from '@/data/products';
 
-export async function GET(request, { params }) {
-  // params.id comes in as a string
+export async function GET(request, context) {
+  const params = await context.params;  
   const product = products.find((p) => String(p.id) === String(params.id));
 
   if (!product) {
     return new Response(
       JSON.stringify({ message: "Not Found" }),
-      { status: 404 }
+      { status: 404, headers: { "Content-Type": "application/json" } }
     );
   }
 
