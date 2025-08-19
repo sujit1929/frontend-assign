@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
 
-export default function ProductCard({ product }) {
+export default function ProductCard({   product }) {
   const { addToCart } = useContext(CartContext);
   const router = useRouter();
 

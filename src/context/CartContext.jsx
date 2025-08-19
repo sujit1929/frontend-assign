@@ -18,6 +18,7 @@ export const CartProvider = ({ children }) => {
   }, [cartItems]);
 
   const addToCart = (product, selectedColor, selectedSize) => {
+    console.log("product", product.name, selectedColor, selectedSize);
     setCartItems((prevItems) => {
       const existingItemIndex = prevItems.findIndex(
         (item) =>
@@ -27,9 +28,7 @@ export const CartProvider = ({ children }) => {
       );
 
       if (existingItemIndex >= 0) {
-        const updatedItems = [...prevItems];
-        updatedItems[existingItemIndex].quantity += 1;
-        return updatedItems;
+        return prevItems;
       }
 
       return [
@@ -47,6 +46,7 @@ export const CartProvider = ({ children }) => {
       ];
     });
   };
+
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => prev.filter((item) => item.id !== itemId));
