@@ -1,3 +1,4 @@
+// components/ProductDetails.jsx
 "use client";
 
 import React from "react";

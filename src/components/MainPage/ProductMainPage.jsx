@@ -1,9 +1,8 @@
+// components/MainPage/ProductMainPage.jsx
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "@/components/ProductCard";
 import { getAllProduct } from "../../../services/Product/ProductService";
-
-
 export default function ProductMainPage() {
     const { data: products, error, isLoading } = useQuery({
         queryKey: ["products"],

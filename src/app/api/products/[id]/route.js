@@ -1,3 +1,4 @@
+// src/app/api/products/[id]/route.js
 import { products } from '@/data/products';
 
 export async function GET(request, context) {

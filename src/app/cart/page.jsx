@@ -1,3 +1,4 @@
+// app/cart/page.jsx
 'use client';
 
 import UserCartItem from "@/components/UserCartItem";

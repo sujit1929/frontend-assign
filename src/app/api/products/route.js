@@ -1,6 +1,6 @@
+// src/app/api/products/route.js
 import { products } from '@/data/products';
 
-// GET all products
 export async function GET() {
   return new Response(JSON.stringify(products), {
     status: 200,

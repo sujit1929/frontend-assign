@@ -1,3 +1,4 @@
+// app/products/[id]/page.jsx
 import ProductViewMainPage from '@/components/MainPage/ProductViewMainPage';
 import { getProductById } from '../../../../services/Product/ProductService';
 
